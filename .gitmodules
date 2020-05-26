@@ -1,0 +1,72 @@
+[submodule "submodules/pulpino"]
+	path = submodules/pulpino
+	url = https://github.com/pulp-platform/pulpino.git
+[submodule "submodules/apb/apb_node"]
+	path = submodules/apb/apb_node
+	url = https://github.com/pulp-platform/apb_node.git
+[submodule "submodules/apb/apb_event_unit"]
+	path = submodules/apb/apb_event_unit
+	url = https://github.com/pulp-platform/apb_event_unit.git
+[submodule "submodules/apb/apb_fll_if"]
+	path = submodules/apb/apb_fll_if
+	url = https://github.com/pulp-platform/apb_fll_if.git
+[submodule "submodules/apb/apb_gpio"]
+	path = submodules/apb/apb_gpio
+	url = https://github.com/pulp-platform/apb_gpio.git
+[submodule "submodules/apb/apb_i2c"]
+	path = submodules/apb/apb_i2c
+	url = https://github.com/pulp-platform/apb_i2c.git
+[submodule "submodules/apb/apb_pulpino"]
+	path = submodules/apb/apb_pulpino
+	url = https://github.com/pulp-platform/apb_pulpino.git
+[submodule "submodules/apb/apb_spi_master"]
+	path = submodules/apb/apb_spi_master
+	url = https://github.com/pulp-platform/apb_spi_master.git
+[submodule "submodules/apb/apb_timer"]
+	path = submodules/apb/apb_timer
+	url = https://github.com/pulp-platform/apb_timer.git
+[submodule "submodules/apb/apb_uart"]
+	path = submodules/apb/apb_uart
+	url = https://github.com/pulp-platform/apb_uart.git
+[submodule "submodules/apb/apb_uart_sv"]
+	path = submodules/apb/apb_uart_sv
+	url = https://github.com/pulp-platform/apb_uart_sv.git
+[submodule "submodules/apb/apb2per"]
+	path = submodules/apb/apb2per
+	url = https://github.com/pulp-platform/apb2per.git
+[submodule "submodules/axi/axi2apb"]
+	path = submodules/axi/axi2apb
+	url = https://github.com/pulp-platform/axi2apb.git
+[submodule "submodules/axi/axi_mem_if_DP"]
+	path = submodules/axi/axi_mem_if_DP
+	url = https://github.com/pulp-platform/axi_mem_if_DP.git
+[submodule "submodules/axi/axi_node"]
+	path = submodules/axi/axi_node
+	url = https://github.com/pulp-platform/axi_node.git
+[submodule "submodules/axi/axi_slice"]
+	path = submodules/axi/axi_slice
+	url = https://github.com/pulp-platform/axi_slice.git
+[submodule "submodules/axi/axi_slice_dc"]
+	path = submodules/axi/axi_slice_dc
+	url = https://github.com/pulp-platform/axi_slice_dc.git
+[submodule "submodules/axi/axi_spi_master"]
+	path = submodules/axi/axi_spi_master
+	url = https://github.com/pulp-platform/axi_spi_master.git
+[submodule "submodules/axi/axi_spi_slave"]
+	path = submodules/axi/axi_spi_slave
+	url = https://github.com/pulp-platform/axi_spi_slave.git
+[submodule "submodules/axi/core2axi"]
+	path = submodules/axi/core2axi
+	url = https://github.com/pulp-platform/core2axi.git
+[submodule "submodules/adv_dbg_if"]
+	path = submodules/adv_dbg_if
+	url = https://github.com/pulp-platform/adv_dbg_if.git
+[submodule "submodules/riscv"]
+	path = submodules/riscv
+	url = https://github.com/pulp-platform/riscv.git
+[submodule "submodules/zero-riscy"]
+	path = submodules/zero-riscy
+	url = https://github.com/pulp-platform/zero-riscy.git
+[submodule "submodules/fpu"]
+	path = submodules/fpu
+	url = https://github.com/pulp-platform/fpu.git
