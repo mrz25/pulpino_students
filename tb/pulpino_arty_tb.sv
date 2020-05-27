@@ -63,6 +63,8 @@ module pulpino_arty_tb ();
   initial begin
     sw  = 4'b0000;
     btn = 4'b0000;
+
+    uart_rxd_out = 1'b1;
   end
 
 
