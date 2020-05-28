@@ -29,8 +29,8 @@ module pulpino_arty
   // inout [7:0] jc,
   // inout [7:0] jd,
 
-  input uart_rxd_out,
-  output uart_txd_in,
+  output uart_rxd_out,
+  input  uart_txd_in,
 
   inout ck_io0,
   inout ck_io1,
@@ -174,10 +174,10 @@ module pulpino_arty
 
   // UART +
   logic uart_tx;
-  assign uart_txd_in = uart_tx;
+  assign uart_rxd_out = uart_tx;
 
   logic uart_rx;
-  assign uart_rx = uart_rxd_out;
+  assign uart_rx = uart_txd_in;
 
 
   // GPIO
