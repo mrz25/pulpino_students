@@ -77,8 +77,8 @@ module pulpino_arty_tb ();
 
 
   pulpino_arty
-  #(.DATA_RAM_INIT_FILE  (""),
-    .INSTR_RAM_INIT_FILE ("")) 
+  #(/*.DATA_RAM_INIT_FILE  (""),
+    .INSTR_RAM_INIT_FILE ("")*/) 
   UUT
   (.*);
 

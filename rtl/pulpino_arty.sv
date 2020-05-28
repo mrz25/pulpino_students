@@ -1,6 +1,6 @@
 module pulpino_arty
- #(parameter DATA_RAM_INIT_FILE   = "",
-   parameter INSTR_RAM_INIT_FILE  = "") 
+ #(parameter DATA_RAM_INIT_FILE   = "test_sw_emb_data.dat",
+   parameter INSTR_RAM_INIT_FILE  = "test_sw_emb_text.dat") 
  (
 
   input CLK100MHZ,
