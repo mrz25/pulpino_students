@@ -140,7 +140,7 @@ set files [list \
  [file normalize "${origin_dir}/submodules/axi/axi_slice_dc/dc_token_ring.v"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice_dc/dc_token_ring_fifo_din.v"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice_dc/dc_token_ring_fifo_dout.v"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/includes/axi_bus.sv"] \
+ [file normalize "${origin_dir}/rtl/includes/axi_bus.sv"] \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adbg_axi_biu.sv"] \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adbg_defines.v"] \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adbg_axi_defines.v"] \
@@ -152,7 +152,7 @@ set files [list \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adbg_top.sv"] \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adv_dbg_if.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb2per/apb2per.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/includes/apb_bus.sv"] \
+ [file normalize "${origin_dir}/rtl/includes/apb_bus.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_event_unit/include/defines_event_unit.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_event_unit/apb_event_unit.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_fll_if/apb_fll_if.sv"] \
@@ -165,7 +165,7 @@ set files [list \
  [file normalize "${origin_dir}/submodules/apb/apb_timer/apb_timer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi2apb/axi2apb.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi2apb/axi2apb32.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/axi2apb_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/axi2apb_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_AR_allocator.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_AW_allocator.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_ArbitrationTree.sv"] \
@@ -183,42 +183,42 @@ set files [list \
  [file normalize "${origin_dir}/submodules/axi/axi_slice/axi_aw_buffer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice/axi_b_buffer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_mem_if_DP/axi_mem_if_SP.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/axi_mem_if_SP_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/axi_mem_if_SP_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_multiplexer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_node.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/axi_node_intf_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/axi_node_intf_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice/axi_r_buffer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_mem_if_DP/axi_read_only_ctrl.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_request_block.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_node/axi_response_block.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice/axi_slice.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/axi_slice_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/axi_slice_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_spi_slave/axi_spi_slave.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/axi_spi_slave_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/axi_spi_slave_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_slice/axi_w_buffer.sv"] \
  [file normalize "${origin_dir}/submodules/axi/axi_mem_if_DP/axi_write_only_ctrl.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/boot_code.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/boot_rom_wrap.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/clk_rst_gen.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/cluster_clock_gating.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/cluster_clock_inverter.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/cluster_clock_mux2.sv"] \
+ [file normalize "${origin_dir}/rtl/boot_code.sv"] \
+ [file normalize "${origin_dir}/rtl/boot_rom_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/clk_rst_gen.sv"] \
+ [file normalize "${origin_dir}/rtl/components/cluster_clock_gating.sv"] \
+ [file normalize "${origin_dir}/rtl/components/cluster_clock_inverter.sv"] \
+ [file normalize "${origin_dir}/rtl/components/cluster_clock_mux2.sv"] \
  [file normalize "${origin_dir}/submodules/axi/core2axi/core2axi.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/core2axi_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/core2axi_wrap.sv"] \
  [file normalize "${origin_dir}/rtl/core_region.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/includes/debug_bus.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/generic_fifo.sv"] \
+ [file normalize "${origin_dir}/rtl/includes/debug_bus.sv"] \
+ [file normalize "${origin_dir}/rtl/components/generic_fifo.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_event_unit/generic_service_unit.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_i2c/i2c_master_bit_ctrl.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_i2c/i2c_master_byte_ctrl.sv"] \
  [file normalize "${origin_dir}/rtl/instr_ram_wrap.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/periph_bus_wrap.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/peripherals.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/pulp_clock_inverter.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/pulp_clock_mux2.sv"] \
+ [file normalize "${origin_dir}/rtl/periph_bus_wrap.sv"] \
+ [file normalize "${origin_dir}/rtl/peripherals.sv"] \
+ [file normalize "${origin_dir}/rtl/components/pulp_clock_inverter.sv"] \
+ [file normalize "${origin_dir}/rtl/components/pulp_clock_mux2.sv"] \
  [file normalize "${origin_dir}/rtl/pulpino_top.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/ram_mux.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/components/rstgen.sv"] \
+ [file normalize "${origin_dir}/rtl/ram_mux.sv"] \
+ [file normalize "${origin_dir}/rtl/components/rstgen.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_event_unit/sleep_unit.sv"] \
  [file normalize "${origin_dir}/rtl/sp_ram_wrap.sv"] \
  [file normalize "${origin_dir}/submodules/apb/apb_spi_master/spi_master_apb_if.sv"] \
@@ -268,7 +268,7 @@ set files [list \
  [file normalize "${origin_dir}/submodules/apb/apb_uart/uart_receiver.vhd"] \
  [file normalize "${origin_dir}/submodules/apb/apb_uart/uart_transmitter.vhd"] \
  [file normalize "${origin_dir}/rtl/pulpino_arty.sv"] \
- [file normalize "${origin_dir}/submodules/pulpino/rtl/includes/apu_defines.sv"] \
+ [file normalize "${origin_dir}/rtl/includes/apu_defines.sv"] \
  [file normalize "${origin_dir}/submodules/adv_dbg_if/rtl/adbg_lint_defines.v"] \
  [file normalize "${origin_dir}/submodules/riscv/include/apu_core_package.sv"] \
  [file normalize "${origin_dir}/submodules/riscv/riscv_L0_buffer.sv"] \
@@ -310,7 +310,7 @@ set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "Verilog Header" -objects $file_obj
 set_property -name "is_global_include" -value "1" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/includes/axi_bus.sv"
+set file "$origin_dir/rtl/includes/axi_bus.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "Verilog Header" -objects $file_obj
@@ -355,7 +355,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/includes/apb_bus.sv"
+set file "$origin_dir/rtl/includes/apb_bus.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -420,7 +420,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/axi2apb_wrap.sv"
+set file "$origin_dir/rtl/axi2apb_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -510,7 +510,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/axi_mem_if_SP_wrap.sv"
+set file "$origin_dir/rtl/axi_mem_if_SP_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -525,7 +525,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/axi_node_intf_wrap.sv"
+set file "$origin_dir/rtl/axi_node_intf_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -555,7 +555,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/axi_slice_wrap.sv"
+set file "$origin_dir/rtl/axi_slice_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -565,7 +565,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/axi_spi_slave_wrap.sv"
+set file "$origin_dir/rtl/axi_spi_slave_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -580,32 +580,32 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/boot_code.sv"
+set file "$origin_dir/rtl/boot_code.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/boot_rom_wrap.sv"
+set file "$origin_dir/rtl/boot_rom_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/clk_rst_gen.sv"
+set file "$origin_dir/rtl/clk_rst_gen.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/cluster_clock_gating.sv"
+set file "$origin_dir/rtl/components/cluster_clock_gating.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/cluster_clock_inverter.sv"
+set file "$origin_dir/rtl/components/cluster_clock_inverter.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/cluster_clock_mux2.sv"
+set file "$origin_dir/rtl/components/cluster_clock_mux2.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -615,7 +615,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/core2axi_wrap.sv"
+set file "$origin_dir/rtl/core2axi_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -625,12 +625,12 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/includes/debug_bus.sv"
+set file "$origin_dir/rtl/includes/debug_bus.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/generic_fifo.sv"
+set file "$origin_dir/rtl/components/generic_fifo.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -655,22 +655,22 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/periph_bus_wrap.sv"
+set file "$origin_dir/rtl/periph_bus_wrap.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/peripherals.sv"
+set file "$origin_dir/rtl/peripherals.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/pulp_clock_inverter.sv"
+set file "$origin_dir/rtl/components/pulp_clock_inverter.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/pulp_clock_mux2.sv"
+set file "$origin_dir/rtl/components/pulp_clock_mux2.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -680,12 +680,12 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/ram_mux.sv"
+set file "$origin_dir/rtl/ram_mux.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/components/rstgen.sv"
+set file "$origin_dir/rtl/components/rstgen.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -935,7 +935,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/submodules/pulpino/rtl/includes/apu_defines.sv"
+set file "$origin_dir/rtl/includes/apu_defines.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
