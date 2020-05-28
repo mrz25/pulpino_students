@@ -18,22 +18,22 @@ BSP           = \ #board_support
 
 BSP_INCLUDE   = \ #$(BSP)/hwlib/include
 
-BOARD_INCLUDE = ../includes/sys_lib/inc\
-	../includes/string_lib/inc\
+BOARD_INCLUDE = ./includes/sys_lib/inc\
+	./includes/string_lib/inc\
 
 BOOT_INCLUDE  = \
 
 OBJS = boot_code.o\
-	../includes/sys_lib/src/spi.o\
-	../includes/sys_lib/src/gpio.o\
-	../includes/sys_lib/src/uart.o\
-	../includes/sys_lib/src/utils.o\
-	../includes/string_lib/src/qprintf.o\
+	./includes/sys_lib/src/spi.o\
+	./includes/sys_lib/src/gpio.o\
+	./includes/sys_lib/src/uart.o\
+	./includes/sys_lib/src/utils.o\
+	./includes/string_lib/src/qprintf.o\
 	
-EMB_OBJS =  ../includes/ref/crt0.boot.o 
+EMB_OBJS =  ./includes/ref/crt0.boot.o 
 
-LDS_EMB     = ../includes/ref/link.common.ld
-LDS_BOOT    = ../includes/ref/link.boot.ld
+LDS_EMB     = ./includes/ref/link.common.ld
+LDS_BOOT    = ./includes/ref/link.boot.ld
 OUTPUT      = boot_code
 OUTPUT_EMB  = $(OUTPUT)_emb
 OUTPUT_BOOT = $(OUTPUT)

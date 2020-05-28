@@ -1,10 +1,10 @@
 // Copyright 2017 ETH Zurich and University of Bologna.
 // Copyright and related rights are licensed under the Solderpad Hardware
-// License, Version 0.51 (the “License”); you may not use this file except in
+// License, Version 0.51 (the “License�?); you may not use this file except in
 // compliance with the License.  You may obtain a copy of the License at
 // http://solderpad.org/licenses/SHL-0.51. Unless required by applicable law
 // or agreed to in writing, software, hardware and materials distributed under
-// this License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
+// this License is distributed on an “AS IS�? BASIS, WITHOUT WARRANTIES OR
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations under the License.
 
@@ -18,7 +18,7 @@ module boot_code
     output logic [31:0] Q
   );
 
-  const logic [0:547] [31:0] mem = {
+  /*const logic [0:1023] [31:0] mem = {
     32'h00000013,
     32'h00000013,
     32'h00000013,
@@ -566,7 +566,20 @@ module boot_code
     32'h00000010,
     32'h000000C4,
     32'hFFFFFCCC,
-    32'h00000030};
+    32'h00000030};*/
+
+reg [31:0] mem [0:1023];
+localparam INIT_FILE = "boot_code.dat";
+
+
+integer ram_index;
+initial begin
+        for (ram_index = 0; ram_index < 1024; ram_index = ram_index + 1)
+          mem[ram_index] = {32'd0};
+        $readmemh(INIT_FILE, mem);
+end
+
+
 
   logic [9:0] A_Q;
 

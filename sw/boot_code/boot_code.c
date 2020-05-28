@@ -9,7 +9,7 @@
 // specific language governing permissions and limitations under the License.
 
 #define __riscv__
-
+#define LED_DELAY 10
 
 //#include <spi.h>
 #include <gpio.h>
@@ -39,20 +39,41 @@ int main()
 {
 
 
+  /*
+  uart_set_cfg(0, 1);
 
-  set_pin_function(30, FUNC_GPIO);
-  set_gpio_pin_direction(30, DIR_OUT);
-  set_gpio_pin_value(30, 1);
-  set_gpio_pin_value(30, 0);
-  set_gpio_pin_value(30, 1);
-  set_gpio_pin_value(30, 0);
-  set_gpio_pin_value(30, 1);
-  set_gpio_pin_value(30, 0);
-  set_gpio_pin_value(30, 1);
-  set_gpio_pin_value(30, 0);
-  set_gpio_pin_value(30, 1);
-  set_gpio_pin_value(30, 0);
+  uart_send("Hello world!\n", 13);
+  uart_wait_tx_done();
+  */
+ 
 
+
+  set_pin_function(11, FUNC_GPIO);
+  set_gpio_pin_direction(11, DIR_OUT);
+  
+  set_gpio_pin_value(11, 0);
+  
+  for (int i = 0; i < LED_DELAY; i++) {
+    //wait some time to have proper power up of external flash
+    #ifdef __riscv__
+        asm volatile ("nop");
+    #else
+        asm volatile ("l.nop");
+    #endif
+  }
+
+  set_gpio_pin_value(11, 1);
+
+  for (int i = 0; i < LED_DELAY; i++) {
+    //wait some time to have proper power up of external flash
+    #ifdef __riscv__
+        asm volatile ("nop");
+    #else
+        asm volatile ("l.nop");
+    #endif
+  }
+
+  set_gpio_pin_value(11, 0);
 
 /*
   // sets direction for SPI master pins with only one CS
