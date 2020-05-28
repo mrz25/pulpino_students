@@ -1,1 +1,10 @@
 /vivado_project/*
+
+/sw/*/*.o
+/sw/*/*/*/*.o
+/sw/*/*/*/*/*.o
+
+/sw/*/*.bin
+/sw/*/*.elf
+/sw/*/disasm_*.S
+/sw/*.dat

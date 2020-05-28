@@ -32,52 +32,35 @@ OBJS = boot_code.o\
 	
 EMB_OBJS =  ./includes/ref/crt0.boot.o 
 
-LDS_EMB     = ./includes/ref/link.common.ld
+
 LDS_BOOT    = ./includes/ref/link.boot.ld
 OUTPUT      = boot_code
-OUTPUT_EMB  = $(OUTPUT)_emb
-OUTPUT_BOOT = $(OUTPUT)
 
 
 .PHONY: all 
 all: clean bootable dat_boot 
 
-.PHONY: emb
-emb: clean embedded dat_emb
 
 
 .PHONY: bootable
-bootable: $(OUTPUT_BOOT)
-$(OUTPUT_BOOT): $(LDS_BOOT) $(EMB_OBJS) $(OBJS)
-	${CC} ${ARCH} $(BOARD_INCLUDE:%=-I%) $(BOOT_INCLUDE:%=-I%) -flto -O3 -Wl,--gc-sections -o $(OUTPUT_BOOT).elf $(EMB_OBJS) -nostartfiles $(OBJS) -lm -T $(LDS_BOOT) -lc
-	${OBJCOPY} -O binary $(OUTPUT_BOOT).elf $(OUTPUT_BOOT).bin
-	${OBJDUMP} -D $(OUTPUT_BOOT).elf > disasm_boot.S
-	$(SIZE) $(OUTPUT_BOOT).elf
+bootable: $(OUTPUT)
+$(OUTPUT): $(LDS_BOOT) $(EMB_OBJS) $(OBJS)
+	${CC} ${ARCH} $(BOARD_INCLUDE:%=-I%) $(BOOT_INCLUDE:%=-I%) -flto -O3 -Wl,--gc-sections -o $(OUTPUT).elf $(EMB_OBJS) -nostartfiles $(OBJS) -lm -T $(LDS_BOOT) -lc
+	${OBJCOPY} -O binary $(OUTPUT).elf $(OUTPUT).bin
+	${OBJDUMP} -D $(OUTPUT).elf > disasm_boot.S
+	$(SIZE) $(OUTPUT).elf
 
-.PHONY: embedded
-embedded: $(OUTPUT_EMB)
-$(OUTPUT_EMB): $(LDS_EMB) $(EMB_OBJS) $(OBJS)
-	${CC} ${ARCH} $(BOARD_INCLUDE:%=-I%) $(BSP_INCLUDE:%=-I%) -flto -O2 -Wl,--gc-sections -o $(OUTPUT_EMB).elf $(EMB_OBJS) -nostartfiles $(OBJS) -lm -T $(LDS_EMB) -lc
-	${OBJCOPY} -O binary $(OUTPUT_EMB).elf $(OUTPUT_EMB).bin
-	${OBJDUMP} -D $(OUTPUT_EMB).elf > disasm_emb.S
-	$(SIZE) $(OUTPUT_EMB).elf
-
-.PHONY: dat_emb
-dat_emb: embedded
-	.././elf2dat.sh $(OUTPUT_EMB).elf
 
 .PHONY: dat_boot
 dat_boot: bootable
-	python3 ../generate_dat.py $(OUTPUT_BOOT).bin ../$(OUTPUT_BOOT).dat
+	python3 ../generate_dat.py $(OUTPUT).bin ../$(OUTPUT).dat
 
 .PHONY: clean
 clean:
 	rm -f $(OBJS) $(DBG_OBJS) $(EMB_OBJS)
 	rm -f $(OUTPUT_DBG)
-	rm -f $(OUTPUT_EMB).elf $(OUTPUT_EMB).bin
-	rm -f $(OUTPUT_BOOT).elf $(OUTPUT_BOOT).bin
-	rm -f $(OUTPUT_EMB).dat
-	rm -f ../$(OUTPUT_BOOT).dat
+	rm -f $(OUTPUT).elf $(OUTPUT).bin
+	rm -f ../$(OUTPUT).dat
 	rm -f disasm.S disasm_debug.S disasm_emb.S disasm_boot.S
 
 
