@@ -68,9 +68,9 @@ dat: embedded
 clean:
 	rm -f $(OBJS) $(OUTPUT_OBJ) $(DBG_OBJS) $(EMB_OBJS)
 	rm -f $(OUTPUT_DBG)
-	rm -f $(OUTPUT_EMB).elf $(OUTPUT_EMB).bin
-	rm -f $(OUTPUT_EMB).dat
-	rm -f disasm.S disasm_debug.S disasm_emb.S disasm_boot.S
+	rm -f $(OUTPUT_EMB).elf $(OUTPUT_EMB).bin $(OUTPUT_EMB)_data.bin $(OUTPUT_EMB)_text.bin
+	rm -f ../$(OUTPUT_EMB)_data.dat ../$(OUTPUT_EMB)_text.dat
+	rm -f disasm_debug.S disasm_emb.S
 
 %.o:	%.S
 	${CC} ${ARCH} $(BOARD_INCLUDE:%=-I%) -c $^ -o $@

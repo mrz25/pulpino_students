@@ -53,7 +53,7 @@ $(OUTPUT): $(LDS_BOOT) $(EMB_OBJS) $(OBJS)
 
 .PHONY: dat_boot
 dat_boot: bootable
-	python3 ../generate_dat.py $(OUTPUT).bin ../$(OUTPUT).dat
+	python3 generate_dat.py $(OUTPUT).bin ../$(OUTPUT).dat
 
 .PHONY: clean
 clean:
